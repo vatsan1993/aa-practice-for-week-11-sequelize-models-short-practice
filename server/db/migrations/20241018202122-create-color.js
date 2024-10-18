@@ -10,8 +10,13 @@ module.exports = {
       },
       name: {
         type: Sequelize.STRING,
-        unique: true,
         allowNull: false,
+        unique: true,
+      },
+      isPrimary: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
       },
       createdAt: {
         type: Sequelize.DATE,
